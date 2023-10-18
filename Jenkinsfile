@@ -73,7 +73,7 @@ pipeline {
                     reportName: 'Trivy Scan',
                     reportTitles: 'Trivy Scan'
                 ]
-         sh 'trivy image --ignore-unfixed --exit-code 1 --severity CRITICAL --no-progress ${registry}:latest'
+         sh 'trivy image --exit-code 1 --severity CRITICAL --no-progress ${registry}:latest'
         }
       }
     }
